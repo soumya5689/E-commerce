@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="center-container" *ngIf="product">
+    <div class="product-card">
+        <div class="product-image">
+            <img [src]="product.processedImg" alt="{{product.name}} Image">
+        </div>
+        <div class="product-details">
+            <h2>{{product.name}}</h2>
+            <p class="description">{{product.description}}</p>
+            <p class="price">Price ${{product.price}}</p>
+            <p class="category">Category: {{product.categoryName}}
+                <mat-icon class="heart-icon" (click)="addToWishlist()" style="cursor: pointer; margin-top: 10px;">favorite_border</mat-icon>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<h1 class="section-heading" *ngIf="reviews.length > 0">Customer Reviews</h1>
+<div class="review-list" *ngIf="reviews">
+    <div class="center-container">
+        <div class="review-card" *ngFor="let review of reviews">
+            <div class="review-image">
+                <img [src]="review.processedImg" *ngIf="review.processedImg" alt="{{review.description}} Image"
+                    class="small-image">
+            </div>
+            <div class="review-details">
+                <h2>{{review.description}}</h2>
+                <div class="details-row">
+                    <p class="rating">Rating : {{review.rating}} -</p>
+                    <p class="username">Username: {{review.username}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1 class="section-heading" *ngIf="FAQS.length > 0">Frequently Asked Questions</h1>
+<div class="faq-list" *ngIf="FAQS">
+    <div class="center-container">
+        <div class="faq-card" *ngFor="let faq of FAQS">
+            <div class="faq-details">
+                <p class="question">Question:</p>
+                <p class="question-text">{{faq.question}}</p>
+                <p class="answer">Answer: </p>
+                <p class="answer-text">{{faq.answer}}</p>
+            </div>
+        </div>
+    </div>
+</div>

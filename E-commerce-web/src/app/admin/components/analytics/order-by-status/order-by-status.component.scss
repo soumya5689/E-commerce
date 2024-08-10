@@ -1,0 +1,42 @@
+.order-status-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.order-status-card {
+    width: 32%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    margin-right: 20px;
+}
+
+.order-status-card:hover {
+    transform: translate(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.status-avatar {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 32px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mat-card-title{
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+}
+
+.status-value{
+    font-size: 36px;
+    color: #007bff;
+    font-weight: bold;
+    margin-top: 10px;
+}

@@ -1,0 +1,41 @@
+<div style="padding: 30px;">
+    <app-order-by-status [data]="data"></app-order-by-status>
+</div>
+
+<div class="analytics-container">
+    <mat-card class="analytics-card">
+        <mat-card-header>
+            <div mat-card-avatar class="metric-avatar">
+                O
+            </div>
+            <mat-card-title>Orders</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="metric-value">{{data.currentMonthOrders}}</div>
+            <div class="metric-subtext">Current Month</div>
+        </mat-card-content>
+        <mat-card-content>
+            <div class="metric-value">{{data.previousMonthOrders}}</div>
+            <div class="metric-subtext">Previous Month</div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="analytics-card">
+        <mat-card-header>
+            <div mat-card-avatar class="metric-avatar">
+                E
+            </div>
+            <mat-card-title>Earnings</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="metric-value">{{data.currentMonthEarnings | currency:'USD':true}}</div>
+            <div class="metric-subtext">Current Month</div>
+        </mat-card-content>
+        <mat-card-content>
+            <div class="metric-value">{{data.previousMonthEarnings | currency:'USD':true}}</div>
+            <div class="metric-subtext">Previous Month</div>
+        </mat-card-content>
+
+    </mat-card>
+
+</div>

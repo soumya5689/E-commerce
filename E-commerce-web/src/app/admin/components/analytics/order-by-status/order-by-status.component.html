@@ -1,0 +1,39 @@
+<div class="order-status-container">
+    <mat-card class="order-status-card">
+        <mat-card-header>
+            <div mat-card-avatar class="status-avatar">
+                P
+            </div>
+            <mat-card-title>Placed</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="status-value">{{data.placed}}</div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="order-status-card">
+        <mat-card-header>
+            <div mat-card-avatar class="status-avatar">
+                S
+            </div>
+            <mat-card-title>Shipped</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="status-value">{{data.shipped}}</div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="order-status-card">
+        <mat-card-header>
+            <div mat-card-avatar class="status-avatar">
+                D
+            </div>
+            <mat-card-title>Delivered</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="status-value">{{data.delivered}}</div>
+        </mat-card-content>
+    </mat-card>
+
+
+</div>

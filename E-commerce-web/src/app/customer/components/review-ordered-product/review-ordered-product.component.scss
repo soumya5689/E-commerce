@@ -1,0 +1,73 @@
+.review-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    margin-top: 45px;
+
+    .file-upload-container{
+        text-align: center;
+        margin-bottom: 20px;
+        .file-upload-label{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+
+            span{
+                margin-right: 8px;
+            }
+            mat-icon{
+                font-size: 20px;
+            }
+        }
+    }
+    .image-preview{
+         display: flex;
+         justify-content: center;
+         margin-top: 16px;
+
+         .circle-image{
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            overflow: hidden;
+            position: relative;
+            background-color: lightgray;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
+            .preview-image{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+         }
+    }
+
+    mat-form-field{
+        width: 100%;
+        margin-top: 20px;
+        mat-label{
+            font-size: 16px;
+        }
+        mat-select,textarea{
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+    bottom[type="submit"]{
+        width: 100%;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+}
